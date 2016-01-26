@@ -529,7 +529,7 @@ dragularModule.factory('dragularService', function dragularServiceFunction($root
           if (target === shared.source) {
             shared.sourceModel.splice(dropIndex, 0, shared.sourceModel.splice(shared.initialIndex, 1)[0]);
           } else {
-            shared.dropElmModel = shared.copy ? angular.copy(shared.sourceModel[shared.initialIndex]) : shared.sourceModel[shared.initialIndex];
+            shared.dropElmModel = shared.sourceModel[shared.initialIndex];
 
             if (!shared.tempModel) {
               shared.targetModel = shared.targetCtx.m;
